@@ -14,7 +14,8 @@ library.
 EtherQL was built at [Advanced Data Analytics Lab](http://ada.suda.edu.cn), with the goal of providing
 a data query infrastructure on Ethereum. It is currently in very alpha beta, and not recommended for production use until it has received sufficient testing.
 
-##Prerequisites
+## Prerequisites
+
 1. JDK 1.8.0 or later.
     
 2. Maven 3.3.0 or later.
@@ -52,9 +53,10 @@ At the root directory of this project, run
 `mvn spring-boot:run`
 
 
-##Configuration
+## Configuration
 
 Add etherql.conf file to your classpath to specify the Ethereum raw data location and MongoDB properties.
+
 ```
 mongo.host=127.0.0.1
 mongo.port=27017
@@ -69,4 +71,4 @@ EtherQL is licensed under [Apache License 2.0](http://www.apache.org/licenses/).
 
 ## TODO list
 
-## 
+##
