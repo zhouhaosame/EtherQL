@@ -38,10 +38,10 @@ public class EthersqlConfig {
     public EthersqlConfig(Config config) {
         Config javaSystemProperties = ConfigFactory.load("no-such-resource-only-system-props");
         logger.info("loading java system properties");
-        Config userConfig = ConfigFactory.parseResources("ethersql.conf");
-        logger.info("loading user defined ethersql.conf");
+        Config userConfig = ConfigFactory.parseResources("etherql.conf");
+        logger.info("loading user defined etherql.conf");
         this.classLoader = getClass().getClassLoader();
-        Config defaultConfig = ConfigFactory.load(classLoader, "ethersql.conf");
+        Config defaultConfig = ConfigFactory.load(classLoader, "etherql.conf");
 
         this.config = javaSystemProperties
                 .withFallback(defaultConfig)
