@@ -41,4 +41,9 @@ public class BlockAPIMysqlImpl implements BlockAPI {
     public int getBlockMinedByMiner(String miner) {
         return 0;
     }
+
+    @Override
+    public long getBlockNumber() {
+        return 0;
+    }
 }

@@ -42,4 +42,15 @@ public class BlockController {
         }
         return null;
     }
+
+    @RequestMapping(value = "number", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
+    public long getBlockNumber() {
+        try {
+            return blockAPI.getBlockNumber();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

@@ -61,6 +61,18 @@ public class BlockAPIMongoImpl implements BlockAPI {
         return getBlockRange(start, end, "timestamp");
     }
 
+    @Override
+    public long getBlockNumber() {
+        Query query = new Query();
+        query.with(new Sort(Sort.Direction.DESC, "number"));
+        query.limit(1);
+        SimpleBlock block = mongoTemplate.findOne(query, SimpleBlock.class);
+        if (block != null)
+            return block.getNumber();
+        else
+            return 0;
+    }
+
     private List<SimpleBlock> getBlockRange(long start, long end, String key){
         return mongoTemplate.find(
                 Query.query(new Criteria()

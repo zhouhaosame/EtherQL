@@ -14,6 +14,7 @@ public interface BlockAPI {
      ====================================================*/
     SimpleBlock getBlockByHash(String hash);
     SimpleBlock getBlockByNumber(long blockNumber);
+    long getBlockNumber();
 
     /**==================================================
      *       Entended api
