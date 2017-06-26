@@ -40,7 +40,11 @@ public class EthereumListener extends EthereumListenerAdapter {
      *  the head of the chain
      */
     @Override
-    public void onSyncDone() {
-        syncDone = true;
+    public void onSyncDone(SyncState state) {
+        System.out.println("onSyncDone " + state);
+        if (!syncDone) {
+            System.out.println(" ** SYNC DONE ** ");
+            syncDone = true;
+        }
     }
 }
